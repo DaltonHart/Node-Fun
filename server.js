@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 })
 
-app.post('/api/somethingelse', (req, res) => {
+
+app.post('/api/places', (req, res) => {
   console.log(req.body)
   let newCity = { name: req.body.name, description: req.body.description };
   cities.push(newCity);
