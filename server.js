@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 })
 
-app.post('/api/cities', (request, response) => {
-  console.log(request.body)
-  let newCity = { name: request.body.name, description: request.body.description };
+app.post('/api/towns', (req, res) => {
+  console.log(req.body)
+  let newCity = { name: req.body.name, description: req.body.description };
   cities.push(newCity);
-  response.json(cities);
+  res.json(cities);
 });
 
-const server = app.listen(3000);
+const server = app.listen(4000);
