@@ -19,4 +19,4 @@ app.post('/api/towns', (request, response) => {
   response.json(cities);
 });
 
-const server = app.listen(3000);
+const server = app.listen(4000);
