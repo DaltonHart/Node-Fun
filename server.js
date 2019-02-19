@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 })
 
-app.post('/api/cities', (request, response) => {
+app.post('/api/towns', (request, response) => {
   console.log(request.body)
   let newCity = { name: request.body.name, description: request.body.description };
   cities.push(newCity);
